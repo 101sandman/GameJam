@@ -1,0 +1,735 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	background: black;
+	color: white;
+}
+.app-main{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+/*----------------- Header -----------------*/
+
+.header{
+	position: absolute;
+	height: 70px;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	z-index: 999;
+	background: #0C151A;
+	border-bottom: 1px solid #545B63;
+}
+.header_menu_btn{
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	border: 1px solid #2F2F2F;
+	background: #000000;
+	right: 20px;
+	top: 10px;
+	cursor:pointer;
+	text-align: center;	
+}
+.header_menu{
+	position: absolute;
+	width: 250px;
+	right: 20px;
+	top: 40px;
+	display: none;
+	border: 1px solid #2F2F2F;
+	background: #000000;
+}
+.header_menu_option{
+	position: relative;
+	width: 250px;
+	text-align: center;
+	margin: 10px 0px 10px 0px;
+	font-family: arial;
+}
+
+/*----------------- Content -----------------*/
+
+.content{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+	
+/*----------------- Footer -----------------*/
+
+/*----------------- Chat -----------------*/
+
+.chat{
+	display: none;
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+	width: 430px;
+	height: 290px;
+	border: 1px solid #3F3F3F;
+	background: #0B0B0B;
+	z-index: 999;
+}
+.chat_container{
+	position: absolute;
+	top:37px;
+	left:10px;
+	bottom: 50px;
+	border: 1px solid #2F2F2F;
+	background: #000000;
+	width:408px;
+	overflow-y: auto;
+	padding: 0px 0px 3px 0px;
+}
+.chat_bar{
+	position: absolute;
+	bottom:10px;
+	left: 10px;
+	background: #000000;
+	border: 1px solid #2F2F2F;
+	height: 30px;
+	width: 330px;
+	color: white;
+}
+.chat_btn{
+	position: absolute;       
+	right: 10px;
+	bottom: 11px;
+	height: 28px;
+	width: 70px;
+	background: grey;
+}
+.message{
+	position: relative;
+	width: 381px;
+	margin: 0px 0px 0px 10px;
+	font-family: arial;
+	font-size: 14px;
+	word-wrap: break-word;
+}
+.timestamp{
+	position: relative;
+	float: left;
+	color: #A79244;
+	margin: 0px 5px 0px 0px;
+}
+.chat_user{
+	position: relative;
+	float: left;
+	color: #519B94;
+	margin: 0px 5px 0px 0px;
+}
+.chat_msg{
+
+}
+.message_container{
+	
+}
+#scroll::-webkit-scrollbar{
+	width:0px;
+} 
+#scroll::-webkit-scrollbar-thumb{
+	background-color:#BDBDBD;
+	border-radius:10px;
+}
+#scroll::-webkit-scrollbar-thumb:hover{
+	background-color:#BF4649;
+	border:1px solid #333333;
+}
+#scroll::-webkit-scrollbar-thumb:active{
+	background-color:#A6393D;
+	border:1px solid #333333;
+} 
+
+/*----------------- Planet -----------------*/
+
+.planet_content{
+	position: absolute;
+	left: 0px;
+	top: 50px;
+	right: 340px;
+	bottom: 0px;	
+	background: url("img/planet/background.png");
+	overflow-y: auto;
+	padding: 10px 0px 0px 10px;
+}
+.planet_overview{
+	position: relative;
+	margin: 0px 10px 10px 0px;
+	background: rgba(28,29,31, 1);
+	width:765px;
+	height: 488px;
+	float: left;
+}
+.planet_overview_header{
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	right: 5px;
+	height: 130px;
+}
+.planet_header_bar{
+	position: absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	height: 25px;
+	background:#140F13;
+	font-family: Calibri;
+	font-size: 14px;
+}
+.planet_header_bar>span{
+	display: block;
+	margin: 4px 0px 0px 8px;
+}
+.planet_information{
+	position: absolute;
+	top: 30px;
+	width: 150px;
+	height: 95px;
+	background: #1D171B;
+	font-family: Calibri;
+	font-size: 14px;	
+}
+.planet_info_size{
+	position: absolute;
+	top: 30px;
+	left: 15px;
+}
+.planet_info_type{
+	position: absolute;
+	top:50px;
+	left: 15px;	
+}
+.planet_info_min{
+	position: absolute;
+	top: 70px;
+	left: 15px;	
+}
+.planet_alliance{
+	position: absolute;
+	top: 30px;
+	left: 155px;
+	width: 220px;
+	height: 58px;
+	background: #1D171B;
+	font-family: Calibri;
+	font-size: 14px;
+}
+.planet_alliance_info{
+	position: absolute;
+	top: 32px;
+	left: 10px;
+}
+.planet_bonus{
+	position: absolute;
+	top: 30px;
+	left: 380px;
+	width: 375px;
+	height: 95px;
+	background: #1D171B;
+	font-family: Calibri;
+	font-size: 14px;
+}
+.planet_bonus_list_cont{
+	position: absolute;
+	top: 32px;
+	left: 10px;
+	right: 5px;
+	bottom: 5px;
+	overflow-y: auto;
+}
+.planet_bonus_list{
+	position: relative;
+	margin: 0px 0px 0px 0px;
+}
+#scroll_bonus::-webkit-scrollbar{
+	width:3px;
+} 
+#scroll_bonus::-webkit-scrollbar-thumb{
+	background-color:#BDBDBD;
+	border-radius:10px;
+}
+#scroll_bonus::-webkit-scrollbar-thumb:hover{
+	background-color:#BF4649;
+	border:1px solid #333333;
+}
+#scroll_bonus::-webkit-scrollbar-thumb:active{
+	background-color:#A6393D;
+	border:1px solid #333333;
+} 
+.planet_map{
+	position: absolute;
+	top: 135px;
+	left: 5px;
+	right: 5px;
+	height: 347px;
+	width: 641px;
+}
+.planet_map_container{
+	position: absolute;
+	top:25px;
+	left: 0px;
+	width: 640px;
+	height: 320px;
+	background: black;
+}
+.planet_options{
+	position: absolute;
+	top: 135px;
+	left: 651px;
+	width: 109px;
+	height: 347px;
+	background: #1D171B;	
+}
+.planet_sector_management{
+	position: relative;
+	margin: 0px 10px 10px 0px;
+	background: rgba(28,29,31, 1);
+	width:765px;
+	height: 488px;
+	float: left;
+}
+.planet_build_options{
+	position: absolute;
+	top: 30px;
+	right: 5px;
+	left: 0px;
+	height: 95px;
+	font-family: Calibri;
+	font-size: 14px;	
+}
+.build_option{
+	position: relative;
+	width:95px;
+	height: 95px;
+	margin: 0px 10px 0px 0px;
+	background: url("img/planet/build_option_bg.png");
+	float: left;
+	cursor: pointer;
+}
+.build_option_slide_icon_left{
+	position: absolute;
+	height:22px;
+	width: 20px;
+	background: url("img/planet/slide_left.png");
+	right: 2px;
+	top: 47px;
+	cursor:pointer;
+}
+.build_option_slide_icon_right{
+	position: absolute;
+	height:22px;
+	width: 20px;
+	background: url("img/planet/slide_right.png");
+	right: 2px;
+	top: 87px;
+	cursor:pointer;
+}
+.sector_map{
+	position: absolute;
+	top: 135px;
+	left: 5px;
+	right: 5px;
+	height: 347px;
+	width: 641px;
+}
+.planet_sector_container{
+	position: absolute;
+	top:25px;
+	left: 0px;
+	width: 640px;
+	height: 320px;
+	background: url("img/planet/sector.png");
+}
+.sector_options{
+	position: absolute;
+	top: 135px;
+	left: 651px;
+	width: 109px;
+	height: 347px;
+	background: #1D171B;	
+}
+#scroll_planet::-webkit-scrollbar{
+	width:5px;
+} 
+#scroll_planet::-webkit-scrollbar-thumb{
+	background-color:#140F13;
+	border-radius:10px;
+}
+#scroll_planet::-webkit-scrollbar-thumb:hover{
+	background-color:#140F13;
+	border:1px solid #140F13;
+}
+#scroll_planet::-webkit-scrollbar-thumb:active{
+	background-color:#140F13;
+	border:1px solid #140F13;
+} 
+.planet_resources{
+	position: relative;
+	margin: 0px 10px 10px 0px;
+	background: rgba(28,29,31, 1);
+	width:765px;
+	height: 488px;
+	float: left;
+}
+.planet_resources_header{
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	right: 5px;
+	height: 55px;
+	font-family: calibri;
+	font-size: 14px;
+}
+.resource_head_icon{
+	position: absolute;
+	height: 25px;
+	width: 30px;
+	background:#140F13;
+	top: 30px;
+}
+.resource_head_name{
+	position: absolute;
+	height: 25px;
+	width: 130px;
+	background:#140F13;
+	top: 30px;
+	left: 35px;
+}
+.resource_head_quality{
+	position: absolute;
+	height: 25px;
+	width: 130px;
+	background:#140F13;
+	top: 30px;
+	left: 170px;
+}
+.resource_head_amount{
+	position: absolute;
+	height: 25px;
+	width: 100px;
+	background:#140F13;
+	top: 30px;
+	left: 305px;
+}
+.resource_head_silospace{
+	position: absolute;
+	height: 25px;
+	width: 100px;
+	background:#140F13;
+	top: 30px;
+	left: 410px;
+} 
+.resource_head_income{
+	position: absolute;
+	height: 25px;
+	width: 100px;
+	background:#140F13;
+	top: 30px;
+	left: 515px;
+} 
+.resource_head_estimate{
+	position: absolute;
+	height: 25px;
+	width: 135px;
+	background:#140F13;
+	top: 30px;
+	right: 0px;
+}
+.header_span{
+	display: block;
+	margin: 4px 0px 0px 8px;
+}
+.planet_resource_list{
+	position: absolute;
+	top:30px;
+	left: 5px;
+	right: 5px;
+	bottom: 5px;
+}
+.planet_resource_row{
+	position: relative;
+	width: 755px;
+	height:25px;
+	margin: 5px 0px 0px 0px;
+	font-family: calibri;
+	color: #4CD2FF;
+	font-size: 14px;
+	text-align: center;
+}
+.resource_icon{
+	position: absolute;
+	height: 25px;
+	width: 30px;
+	background:#1D171B;
+	top: 30px;
+}
+.resource_name{
+	position: absolute;
+	height: 25px;
+	width: 130px;
+	background:#1D171B;
+	top: 30px;
+	left: 35px;
+}
+.resource_quality{
+	position: absolute;
+	height: 25px;
+	width: 130px;
+	background:#1D171B;
+	top: 30px;
+	left: 170px;
+}
+.resource_amount{
+	position: absolute;
+	height: 25px;
+	width: 100px;
+	background:#1D171B;
+	top: 30px;
+	left: 305px;
+}
+.resource_silospace{
+	position: absolute;
+	height: 25px;
+	width: 100px;
+	background:#1D171B;
+	top: 30px;
+	left: 410px;
+} 
+.resource_income{
+	position: absolute;
+	height: 25px;
+	width: 100px;
+	background:#1D171B;
+	top: 30px;
+	left: 515px;
+} 
+.resource_estimate{
+	position: absolute;
+	height: 25px;
+	width: 135px;
+	background:#1D171B;
+	top: 30px;
+	right: 0px;
+}
+.header_span2{
+	display: block;
+	margin: 4px 0px 0px 0px;
+	text-align: center;
+}
+.resource_x{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: url("img/planet/x.png");
+	display: block;
+	left: 5px;
+	top: 3px;
+}
+.planet_build_options_cont{
+	position: absolute;
+	height: 95px;
+	left:0px;
+	width: 725px;
+	overflow: hidden;
+}
+.build_option_slide{
+	position: absolute;
+	width: 1000px;
+	height: 95px;
+	left: 0px;
+}
+.grid{
+	position: relative;
+	width: 64px;
+	height: 64px;
+	float: left;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.planet_sector{
+	position: relative;
+	background: yellow;
+	width: 320px;
+	height: 160px;
+	float: left;
+}
+.smallGrid{
+	position: relative;
+	width: 32px;
+	height: 32px;
+	float: left;
+}
+.grid_building{
+	position:absolute;
+	width: 64px;
+	height: 64px;
+}
+.build_option_mine{
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	width: 93px;
+	height: 93px;
+	background: url("img/planet/building/mine.png");
+}
+.build_option_plant{
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	width: 93px;
+	height: 93px;
+	background: url("img/planet/building/plant.png");
+}
+.building_info{
+	position: absolute;
+    top: 135px;
+    left: 5px;
+    right: 5px;
+    height: 347px;
+    width: 641px;
+	background: rgba(28,29,31, 1);
+	display:none;
+}
+.building_info_descr_cont{
+	position: absolute;
+	top: 30px;
+	width: 640px;
+	height: 75px;
+    background: #1D171B;
+    font-family: Calibri;
+    font-size: 14px;
+}
+.building_info_text{
+	position: absolute;
+    top: 32px;
+    left: 10px;
+}
+.building_info_cost{
+	position: absolute;
+	top: 110px;
+	width: 120px;
+	height: 75px;
+    background: #1D171B;
+    font-family: Calibri;
+    font-size: 14px;
+}
+.building_info_loc{
+	position: absolute;
+	top: 110px;
+	left: 125px;
+	width: 120px;
+	height: 75px;
+    background: #1D171B;
+    font-family: Calibri;
+    font-size: 14px;
+}
+.building_info_income{
+	position: absolute;
+	top: 110px;
+	left: 250px;
+	width: 120px;
+	height: 75px;
+    background: #1D171B;
+    font-family: Calibri;
+    font-size: 14px;
+}
+.building_info_build{
+	position: absolute;
+	top: 110px;
+	left: 375px;
+	width: 120px;
+	height: 75px;
+    background: #1D171B;
+    font-family: Calibri;
+    font-size: 14px;
+}
+.building_info_btn{
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+    height: 30px;
+    background: #140F13;
+    font-family: Calibri;
+    font-size: 14px;	
+	width: 60px;
+	cursor: pointer;
+}
+.building_info_btn>span{
+    display: block;
+    text-align: center;
+	margin: 6px 0px 0px 0px;;
+}
+.building_upgrade{
+	display: none;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    height: 130px;
+	background: rgba(28,29,31, 1);
+}
+.building_upgrade_cost{
+    position: absolute;
+    top: 30px;
+    width: 120px;
+    height: 95px;
+    background: #1D171B;
+    font-family: Calibri;
+    font-size: 14px;
+}
+.building_upgrade_location{
+    position: absolute;
+    top: 30px;
+	left: 125px;
+    width: 120px;
+    height: 95px;
+    background: #1D171B;
+    font-family: Calibri;
+    font-size: 14px;
+}
+.building_upgrade_income{
+    position: absolute;
+    top: 30px;
+	left: 250px;	
+    width: 120px;
+    height: 95px;
+    background: #1D171B;
+    font-family: Calibri;
+    font-size: 14px;
+}
+.building_upgrade_time{
+    position: absolute;
+    top: 30px;
+	left: 375px;	
+    width: 120px;
+    height: 95px;
+    background: #1D171B;
+    font-family: Calibri;
+    font-size: 14px;
+}
+.building_upgrade_btn{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    height: 30px;
+    background: #140F13;
+    font-family: Calibri;
+    font-size: 14px;
+    width: 60px;
+    cursor: pointer;
+}
+.building_upgrade_btn>span{
+	display: block;
+    text-align: center;
+    margin: 6px 0px 0px 0px;
+}
