@@ -19,29 +19,37 @@ var playState = {
 		this.keyboard = game.input.keyboard;
 		
 		player = game.add.sprite(game.world.centerX, game.world.centerY, 'player');
-		game.camera.follow(player);
+		player.anchor.setTo(0.5, 0.5);
+		 game.camera.follow(player, Phaser.Camera.FOLLOW_TOPDOWN_TIGHT);
+		 
+		 cursors = game.input.keyboard.createCursorKeys();
 		 
 	},
 	update: function() {
 
-		// Player movement
-		if (this.keyboard.isDown(Phaser.Keyboard.W))
+	    if (cursors.left.isDown)
 		{
-			player.y -= 40;
+			player.x -= speed;
+			player.angle = -15;
 		}
-		else if (this.keyboard.isDown(Phaser.Keyboard.S))
+		else if (cursors.right.isDown)
 		{
-			player.y += 40;
-		}		
-		else if (this.keyboard.isDown(Phaser.Keyboard.D))
-		{
-			player.x += 40;
-			
+			player.x += speed;
+			player.angle = 15;
 		}
-		else if (this.keyboard.isDown(Phaser.Keyboard.A))
+		else if (cursors.up.isDown)
 		{
-			player.x -= 40;
-		}	
+			player.y -= speed;
+		}
+		else if (cursors.down.isDown)
+		{
+			player.y += speed;
+		}
+		else
+		{
+			player.angle = 0;
+		}
+
 		
 	}
 	
