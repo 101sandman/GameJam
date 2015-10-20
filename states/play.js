@@ -18,37 +18,29 @@ var playState = {
 		
 		this.keyboard = game.input.keyboard;
 		
-		game.physics.startSystem(Phaser.Physics.P2JS);
-		
 		player = game.add.sprite(game.world.centerX, game.world.centerY, 'player');
-
-		game.physics.p2.enable(player);
-
-		cursors = game.input.keyboard.createCursorKeys();
-
 		game.camera.follow(player);
 		 
 	},
 	update: function() {
 
-		player.body.setZeroVelocity();
-
-		if (cursors.up.isDown)
+		// Player movement
+		if (this.keyboard.isDown(Phaser.Keyboard.W))
 		{
-			player.body.moveUp(300)
+			player.y -= 40;
 		}
-		else if (cursors.down.isDown)
+		else if (this.keyboard.isDown(Phaser.Keyboard.S))
 		{
-			player.body.moveDown(300);
+			player.y += 40;
+		}		
+		else if (this.keyboard.isDown(Phaser.Keyboard.D))
+		{
+			player.x += 40;
+			
 		}
-
-		if (cursors.left.isDown)
+		else if (this.keyboard.isDown(Phaser.Keyboard.A))
 		{
-			player.body.velocity.x = -300;
-		}
-		else if (cursors.right.isDown)
-		{
-			player.body.moveRight(300);
+			player.x -= 40;
 		}	
 		
 	}
