@@ -18,7 +18,6 @@ var playState = {
 		game.world.setBounds(0, 0, 1920, 1080);
 
 		background = game.add.tileSprite(0, 0, 1920, 1080, 'background');
-		background.fixedToCamera = true;
 		
 		
 		player = game.add.sprite(game.world.centerX, game.world.centerY, 'player');
