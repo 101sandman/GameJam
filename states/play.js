@@ -19,28 +19,34 @@ var playState = {
 		this.keyboard = game.input.keyboard;
 		
 		player = game.add.sprite(game.world.centerX, game.world.centerY, 'player');
+
+		game.physics.p2.enable(player);
+
+		cursors = game.input.keyboard.createCursorKeys();
+
 		game.camera.follow(player);
 		 
 	},
 	update: function() {
 
-		// Player movement
-		if (this.keyboard.isDown(Phaser.Keyboard.W))
+		player.body.setZeroVelocity();
+
+		if (cursors.up.isDown)
 		{
-			player.y -= 40;
+			player.body.moveUp(300)
 		}
-		else if (this.keyboard.isDown(Phaser.Keyboard.S))
+		else if (cursors.down.isDown)
 		{
-			player.y += 40;
-		}		
-		else if (this.keyboard.isDown(Phaser.Keyboard.D))
-		{
-			player.x += 40;
-			
+			player.body.moveDown(300);
 		}
-		else if (this.keyboard.isDown(Phaser.Keyboard.A))
+
+		if (cursors.left.isDown)
 		{
-			player.x -= 40;
+			player.body.velocity.x = -300;
+		}
+		else if (cursors.right.isDown)
+		{
+			player.body.moveRight(300);
 		}	
 		
 	}
