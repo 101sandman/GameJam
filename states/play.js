@@ -17,31 +17,31 @@ var playState = {
 		background.fixedToCamera = true;
 		
 		this.keyboard = game.input.keyboard;
-
 		
+		player = game.add.sprite(game.world.centerX, game.world.centerY, 'player');
+		game.camera.follow(player);
+		 
 	},
 	update: function() {
 
-		// Camera
+		// Player movement
 		if (this.keyboard.isDown(Phaser.Keyboard.W))
 		{
-			game.camera.y -= 40;
+			player.y -= 40;
 		}
 		else if (this.keyboard.isDown(Phaser.Keyboard.S))
 		{
-			game.camera.y += 40;
+			player.y += 40;
 		}		
 		else if (this.keyboard.isDown(Phaser.Keyboard.D))
 		{
-			game.camera.x += 40;
+			player.x += 40;
 			
 		}
 		else if (this.keyboard.isDown(Phaser.Keyboard.A))
 		{
-			game.camera.x -= 40;
-		}
-		
-		
+			player.x -= 40;
+		}	
 		
 	}
 	
