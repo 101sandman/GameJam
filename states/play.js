@@ -11,9 +11,10 @@ var playState = {
 	
 	create: function() {	
 
-		// Map fixed settings
 		game.world.setBounds(0, 0, 3000, 1500);
-		
+
+		background = game.add.tileSprite(0, 0, 1920, 1080, 'background');
+		background.fixedToCamera = true;
 		
 		this.keyboard = game.input.keyboard;
 
