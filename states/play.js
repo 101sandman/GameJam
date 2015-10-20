@@ -2,6 +2,10 @@
 //--------------- Prepared variables -----------------//
 //----------------------------------------------------//
 
+var player;
+var Keys = Phaser.Keyboard;
+var speed = 4;
+var cursors;
 
 //----------------------------------------------------//
 	
@@ -16,7 +20,6 @@ var playState = {
 		background = game.add.tileSprite(0, 0, 1920, 1080, 'background');
 		background.fixedToCamera = true;
 		
-		this.keyboard = game.input.keyboard;
 		
 		player = game.add.sprite(game.world.centerX, game.world.centerY, 'player');
 		player.anchor.setTo(0.5, 0.5);
