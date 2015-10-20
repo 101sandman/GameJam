@@ -18,6 +18,8 @@ var playState = {
 		
 		this.keyboard = game.input.keyboard;
 		
+		game.physics.startSystem(Phaser.Physics.P2JS);
+		
 		player = game.add.sprite(game.world.centerX, game.world.centerY, 'player');
 
 		game.physics.p2.enable(player);
