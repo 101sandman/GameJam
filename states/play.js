@@ -31,7 +31,7 @@ var playState = {
 		map.setCollisionBetween(11, 11);
 	
 		// player
-		player = game.add.sprite(game.world.centerX, game.world.centerY, 'player');
+		player = game.add.sprite(game.world.centerX, game.world.centerY, 'player'); 
 		
 		game.physics.enable(player);
 		player.body.collideWorldBounds = true;
@@ -43,10 +43,10 @@ var playState = {
 		cursors = game.input.keyboard.createCursorKeys();
 		
 		// animations
-		player.animations.add('left',	[13, 14, 15, 16, 17, 18], 10, true);
-		player.animations.add('right', 	[13, 14, 15, 16, 17, 18], 10, true);
-		player.animations.add('up', 	[8, 9, 10, 11, 12], 10, true);
-		player.animations.add('down', 	[2, 3, 4, 5, 6], 	10, true);
+		player.animations.add('left',	[13, 14, 15, 16, 17], 10, true);
+		player.animations.add('right',	[19, 20, 21, 22], 10, true);
+		player.animations.add('up', 	[8, 9, 10, 11], 10, true);
+		player.animations.add('down', 	[2, 3, 4, 5], 	10, true);
 		 
 	},
 	update: function() {
