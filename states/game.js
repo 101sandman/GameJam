@@ -1,5 +1,5 @@
-var w = 800,
-    h = 600;
+var w = 1280,
+    h = 720;
 	
 var game = new Phaser.Game(w, h, Phaser.AUTO, 'gameDiv');
 

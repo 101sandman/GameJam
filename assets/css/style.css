@@ -1,0 +1,27 @@
+/*
+||||||||||||||||||||||||	
+| Globals
+|||||||||||||||||||||||
+|
+*/
+body
+{
+	margin: 	0px;
+	padding: 	0px;
+	background: url('images/background.png');
+}
+/*
+||||||||||||||||||||||||	
+| 
+|||||||||||||||||||||||
+|
+*/
+
+#gameDiv
+{
+	position: 	relative;
+	margin:		auto;
+	width:		1280px;
+	height:		720px;
+	padding:	60px 0px 0px 0px;
+}
