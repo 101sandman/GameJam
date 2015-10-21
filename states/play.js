@@ -3,7 +3,6 @@
 //----------------------------------------------------//
 
 var player;
-var cursors;
 
 //----------------------------------------------------//
 	
@@ -40,7 +39,7 @@ var playState = {
 		game.camera.follow(player, Phaser.Camera.FOLLOW_TOPDOWN_TIGHT);
 	
 		// Input
-		cursors = game.input.keyboard.createCursorKeys();
+		this.keyboard = game.input.keyboard;
 		
 		// animations
 		player.animations.add('left',	[13, 14, 15, 16, 17], 10, true);
@@ -55,22 +54,22 @@ var playState = {
 	
 		player.body.velocity.set(0);
 		
-		if (cursors.left.isDown)
+		if (this.keyboard.isDown(Phaser.Keyboard.A))
 		{
 			player.body.velocity.x = -200;
 			player.play('left');
 		}
-		else if (cursors.right.isDown)
+		else if (this.keyboard.isDown(Phaser.Keyboard.D))
 		{
 			player.body.velocity.x = 200;
 			player.play('right');
 		}
-		else if (cursors.up.isDown)
+		else if (this.keyboard.isDown(Phaser.Keyboard.W))
 		{
 			player.body.velocity.y = -200;
 			player.play('up');
 		}
-		else if (cursors.down.isDown)
+		else if (this.keyboard.isDown(Phaser.Keyboard.S))
 		{
 			player.body.velocity.y = 200;
 			player.play('down');
