@@ -15,47 +15,59 @@ var playState = {
 	
 	create: function() {	
 
+		// JSON with our map layout
 		map = game.add.tilemap('firstlevel');
 
+		// tileset with our images
 		map.addTilesetImage('ground', 'groundset');
+
+		// ground layer
+		groundLayer = map.createLayer('groundLayer');	
+					
+		// Set world size according to map size
+		groundLayer.resizeWorld();
+
 		
-		layer = map.createLayer('groundLayer');	
 		
-		layer.resizeWorld();
-		
+		// Collide with tile IDs
+		map.setCollisionBetween(11, 11);
+	
+		// player
 		player = game.add.sprite(game.world.centerX, game.world.centerY, 'player');
-		player.anchor.setTo(0.5, 0.5);
+		
+		game.physics.enable(player);
+		player.body.collideWorldBounds = true;
+		
+		// camera folow player
 		game.camera.follow(player, Phaser.Camera.FOLLOW_TOPDOWN_TIGHT);
-		 
+	
+		// Input
 		cursors = game.input.keyboard.createCursorKeys();
 		 
 	},
 	update: function() {
 
-	    if (cursors.left.isDown)
+		game.physics.arcade.collide(player, groundLayer);
+	
+		player.body.velocity.set(0);
+		
+		if (cursors.left.isDown)
 		{
-			player.x -= speed;
-			player.angle = -15;
+			player.body.velocity.x = -200;
 		}
 		else if (cursors.right.isDown)
 		{
-			player.x += speed;
-			player.angle = 15;
+			player.body.velocity.x = 200;
 		}
 		else if (cursors.up.isDown)
 		{
-			player.y -= speed;
+			player.body.velocity.y = -200;
 		}
 		else if (cursors.down.isDown)
 		{
-			player.y += speed;
+			player.body.velocity.y = 200;
 		}
-		else
-		{
-			player.angle = 0;
-		}
-
-		
+	
 	}
 	
 };
