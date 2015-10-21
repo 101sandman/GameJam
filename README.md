@@ -1,4 +1,5 @@
 # GameJam
-NEEDS TO BE FILLED IN
 
-13
+GameDev skype group creating a Hack and slash.
+
+
