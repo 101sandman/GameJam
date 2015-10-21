@@ -7,6 +7,9 @@ var loadState = {
 		
 		game.load.image('background', 'assets/images/background.jpg');
 		game.load.image('player', 'assets/images/player.png');
+	
+		game.load.tilemap('firstlevel', 'assets/tilemap/arena.json', null, Phaser.Tilemap.TILED_JSON);
+		game.load.image('groundset', 'assets/tileset/ground.png');
 		
 	},
 	

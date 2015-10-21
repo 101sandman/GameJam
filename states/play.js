@@ -15,16 +15,19 @@ var playState = {
 	
 	create: function() {	
 
-		game.world.setBounds(0, 0, 1920, 1080);
+		map = game.add.tilemap('firstlevel');
 
-		background = game.add.tileSprite(0, 0, 1920, 1080, 'background');
+		map.addTilesetImage('ground', 'groundset');
 		
+		layer = map.createLayer('groundLayer');	
+		
+		layer.resizeWorld();
 		
 		player = game.add.sprite(game.world.centerX, game.world.centerY, 'player');
 		player.anchor.setTo(0.5, 0.5);
-		 game.camera.follow(player, Phaser.Camera.FOLLOW_TOPDOWN_TIGHT);
+		game.camera.follow(player, Phaser.Camera.FOLLOW_TOPDOWN_TIGHT);
 		 
-		 cursors = game.input.keyboard.createCursorKeys();
+		cursors = game.input.keyboard.createCursorKeys();
 		 
 	},
 	update: function() {
